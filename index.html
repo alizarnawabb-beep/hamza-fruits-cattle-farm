@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="HAMZA FRUITS & CATTLE FARM in Sadiqabad, Rahim Yar Khan, Punjab, Pakistan. Seasonal orchard fruits and healthy cattle. Wholesale & retail." />
+  <meta name="keywords" content="fruit farm sadiqabad, fruit farm rahim yar khan, fruit farm pakistan, cattle farm sadiqabad, cattle farm pakistan, orchard fruits, sahiwal, cholistani, farm visits, wholesale fruits" />
+  <title>HAMZA FRUITS & CATTLE FARM | Sadiqabad, Pakistan</title>
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --text:#eaf1ff;
+      --muted:#b8c4dc;
+      --accent:#41d6b2;
+      --accent2:#68a7ff;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 650px at 15% -10%, rgba(104,167,255,.20), transparent 55%),
+        radial-gradient(900px 650px at 85% 10%, rgba(65,214,178,.18), transparent 55%),
+        linear-gradient(180deg, #070b15, var(--bg) 30%, #070b15 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1150px;margin:0 auto;padding:22px}
+
+    .topbar{
+      display:flex;justify-content:space-between;align-items:center;gap:10px;
+      color:var(--muted);font-size:13px;margin-top:6px;flex-wrap:wrap
+    }
+    .pill{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      padding:7px 10px;border-radius:999px;
+      display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap
+    }
+
+    .nav{
+      margin-top:14px;
+      display:flex;justify-content:space-between;align-items:center;gap:14px;
+      padding:14px 14px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      position:sticky;top:12px;z-index:50;
+      flex-wrap:wrap;
+    }
+    .brand{display:flex;align-items:center;gap:10px;min-width:260px}
+    .logo{
+      width:38px;height:38px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 14px 45px rgba(65,214,178,.20);
+    }
+    .brand b{display:block;letter-spacing:.2px}
+    .brand small{display:block;color:var(--muted);font-weight:600}
+    .links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .links a{color:var(--muted);font-weight:650;font-size:14px}
+    .links a:hover{color:var(--text)}
+    .menuBtn{display:none}
+
+    @media (max-width:900px){
+      .menuBtn{display:inline-flex}
+      .links{display:none; width:100%}
+      .nav.open .links{display:flex; flex-direction:column; align-items:flex-start; padding-top:10px}
+      .brand{min-width:auto}
+    }
+
+    .hero{
+      margin-top:18px;
+      display:grid;grid-template-columns:1.25fr .75fr;gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+    .panel{
+      border:1px solid var(--border);
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    h1{margin:0 0 12px;font-size:42px;line-height:1.08}
+    @media (max-width:600px){ h1{font-size:32px} }
+    .sub{margin:0 0 16px;color:var(--muted);font-size:15px}
+    .bullets{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+    .bullets li{
+      display:flex;gap:10px;align-items:flex-start;
+      color:var(--muted);
+      padding:10px 12px;border-radius:16px;
+      background:rgba(15,26,51,.45);
+      border:1px solid var(--border);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      margin-top:5px;flex:0 0 auto;
+    }
+
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      padding:11px 14px;border-radius:16px;
+      font-weight:750;cursor:pointer;
+      display:inline-flex;gap:10px;align-items:center;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(65,214,178,.22), rgba(104,167,255,.22));
+      border-color: rgba(104,167,255,.35);
+    }
+
+    .statGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .stat{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:18px;padding:14px;
+    }
+    .stat b{font-size:18px}
+    .stat span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+
+    .section{margin-top:22px}
+    .section h2{margin:0 0 12px;font-size:24px}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    @media (max-width:1000px){ .grid4{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){ .grid4{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--border);
+      background:rgba(15,26,51,.55);
+      border-radius:20px;padding:16px;
+    }
+    .card h3{margin:0 0 6px;font-size:17px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .tag{
+      display:inline-flex;margin-top:10px;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);font-size:12px;font-weight:700;
+    }
+
+    .twoCol{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:900px){ .twoCol{grid-template-columns:1fr} }
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .list li{margin:6px 0}
+
+    .footer{
+      margin:26px 0 10px;
+      border-top:1px solid var(--border);
+      padding-top:14px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      color:var(--muted);font-size:14px;
+    }
+
+    .whatsapp{
+      position:fixed;right:16px;bottom:16px;z-index:60;
+      border-radius:999px;
+      padding:12px 14px;
+      border:1px solid rgba(37,211,102,.35);
+      background:rgba(37,211,102,.18);
+      backdrop-filter: blur(10px);
+      font-weight:850;
+      display:flex;gap:10px;align-items:center;
+    }
+    .waDot{
+      width:10px;height:10px;border-radius:999px;background:#25D366;
+      box-shadow:0 0 0 6px rgba(37,211,102,.18);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- TOP INFO -->
+    <div class="topbar">
+      <div class="pill">📍 <span><b>Sadiqabad, Rahim Yar Khan</b>, Punjab, Pakistan</span></div>
+      <div class="pill">📞 <span><b>+92 300 8482628</b> • <b>+92 322 3759193</b> (Call/WhatsApp)</span></div>
+    </div>
+
+    <!-- NAV -->
+    <div class="nav" id="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <b>HAMZA FRUITS & CATTLE FARM</b>
+          <small>Sadiqabad • Rahim Yar Khan • Punjab</small>
+        </div>
+      </div>
+
+      <a class="btn menuBtn" href="javascript:void(0)" onclick="toggleMenu()">Menu</a>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#offer">What We Offer</a>
+        <a href="#story">Our Story</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero" id="home">
+      <div class="panel">
+        <h1>Premium Orchard Fruits<br/>and Healthy Cattle</h1>
+        <p class="sub">
+          <b>HAMZA FRUITS & CATTLE FARM</b> provides seasonal fruits from our orchards and well-cared cattle.
+          Wholesale and retail supply available (delivery depends on logistics).
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get Today’s Rates</a>
+          <a class="btn" href="#products">View Products</a>
+          <a class="btn" href="#services">Farm Visits</a>
+        </div>
+
+        <ul class="bullets">
+          <li><span class="dot"></span><span><b>Transparent dealing:</b> rates + availability shared on WhatsApp.</span></li>
+          <li><span class="dot"></span><span><b>Quality-first:</b> fruit grading/packing and cattle care standards.</span></li>
+          <li><span class="dot"></span><span><b>Wholesale support:</b> for mandi, shops, and bulk buyers.</span></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2 style="margin:0 0 10px;">Quick Info</h2>
+        <div class="statGrid">
+          <div class="stat"><b>Seasonal Fruits</b><span>Mango • Kinnow • Guava • Dates (edit as needed)</span></div>
+          <div class="stat"><b>Cattle</b><span>Sahiwal / Cholistani / Cross (edit as needed)</span></div>
+          <div class="stat"><b>Wholesale</b><span>Bulk rates for markets & stores</span></div>
+          <div class="stat"><b>Visits</b><span>By appointment</span></div>
+        </div>
+
+        <div class="card" style="margin-top:12px;">
+          <h3 style="margin:0 0 6px;">Working Hours</h3>
+          <p>Mon–Sun: 9:00 AM – 8:00 PM</p>
+          <span class="tag">Sadiqabad (RYK)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT WE OFFER -->
+    <div class="section" id="offer">
+      <h2>What We Offer</h2>
+      <div class="grid4">
+        <div class="card">
+          <h3>Orchard Fruits</h3>
+          <p>Seasonal harvest, graded packing, bulk & retail supply.</p>
+          <span class="tag">Seasonal</span>
+        </div>
+        <div class="card">
+          <h3>Wholesale Supply</h3>
+          <p>Rates for mandi/shops/distributors with schedule planning.</p>
+          <span class="tag">Bulk rates</span>
+        </div>
+        <div class="card">
+          <h3>Healthy Cattle</h3>
+          <p>Well-cared cattle with proper feeding and routine care.</p>
+          <span class="tag">On request</span>
+        </div>
+        <div class="card">
+          <h3>Farm Visits</h3>
+          <p>Guided visits for serious buyers and groups (appointment only).</p>
+          <span class="tag">By appointment</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY + MISSION -->
+    <div class="section" id="story">
+      <div class="twoCol">
+        <div class="panel">
+          <small style="color:var(--muted);font-weight:800;letter-spacing:.3px;">OUR STORY</small>
+          <h2 style="margin:8px 0 10px;">Supplying quality since <span style="color:var(--accent2)">[Year]</span></h2>
+          <p class="sub">
+            Replace this with your real farm story: where your farm is, how many years you’ve been operating,
+            and why buyers trust your fruit and cattle.
+          </p>
+          <ul class="list">
+            <li>Orchard-focused fruit production</li>
+            <li>Grading/handling for market-ready supply</li>
+            <li>Well-managed cattle with routine care</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2 style="margin:0 0 10px;">Our Mission</h2>
+          <p class="sub" style="margin-bottom:12px;">
+            To provide fresh fruits and responsibly maintained cattle for Pakistani customers.
+          </p>
+
+          <div class="card" style="margin-bottom:10px;">
+            <h3>Why Choose Us</h3>
+            <ul class="list">
+              <li>Quality checks on grading/handling</li>
+              <li>Clear WhatsApp communication on rates and stock</li>
+              <li>Reliable wholesale coordination</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Our Commitment</h3>
+            <p>Hygiene, consistency, and long-term trust with buyers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="section" id="services">
+      <h2>Our Services</h2>
+      <div class="grid4">
+        <div class="card">
+          <h3>Farm Visit (Buyers)</h3>
+          <p>Visit orchard/cattle area and finalize purchase on-site.</p>
+        </div>
+        <div class="card">
+          <h3>Bulk Fruit Orders</h3>
+          <p>Market-ready packing with scheduled dispatch (as feasible).</p>
+        </div>
+        <div class="card">
+          <h3>Cattle Selection</h3>
+          <p>Shortlisting support for farm/market requirements.</p>
+        </div>
+        <div class="card">
+          <h3>Group Tours</h3>
+          <p>Educational/agri visits for groups (appointment only).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="section" id="products">
+      <h2>Our Products</h2>
+      <div class="grid4">
+        <div class="card">
+          <h3>Mango</h3>
+          <p>Chaunsa / Sindhri (edit varieties). Seasonal.</p>
+          <span class="tag">Seasonal</span>
+        </div>
+        <div class="card">
+          <h3>Kinnow / Citrus</h3>
+          <p>Graded packing for retail and bulk.</p>
+          <span class="tag">Seasonal</span>
+        </div>
+        <div class="card">
+          <h3>Guava</h3>
+          <p>Fresh supply with sorting for quality.</p>
+          <span class="tag">Seasonal</span>
+        </div>
+        <div class="card">
+          <h3>Cattle</h3>
+          <p>Healthy cattle options—details on WhatsApp.</p>
+          <span class="tag">On request</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+      <h2>Get In Touch</h2>
+      <div class="twoCol">
+        <div class="card">
+          <h3>Call / WhatsApp</h3>
+          <p><b>+92 300 8482628</b> (Phone & WhatsApp)</p>
+          <p><b>+92 322 3759193</b> (Phone & WhatsApp)</p>
+          <p style="color:var(--muted);font-size:13px;margin-top:10px">
+            You can message on WhatsApp for today’s rates and availability.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Address</h3>
+          <p>Sadiqabad, Rahim Yar Khan, Punjab, Pakistan</p>
+          <p><b>Email (optional):</b> you@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> HAMZA FRUITS & CATTLE FARM. All rights reserved.</div>
+      <div>Sadiqabad (RYK) • Punjab • Pakistan</div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button (opens WhatsApp chat with your primary number) -->
+  <a class="whatsapp"
+     href="https://wa.me/923008482628?text=Assalamualaikum%2C%20please%20share%20today%E2%80%99s%20rates%20and%20availability%20for%20fruits%20and%20cattle."
+     target="_blank" rel="noopener">
+    <span class="waDot" aria-hidden="true"></span> WhatsApp: +92 300 8482628
+  </a>
+
+  <script>
+    function toggleMenu(){ document.getElementById("nav").classList.toggle("open"); }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
